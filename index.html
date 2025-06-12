@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Perrito</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Burger Perrito</h1>
+    <h2>Haz tu pedido</h2>
+
+    <div class="container">
+      <form action="" method="POST">
+        <h3>Datos de Contacto</h3>
+        <div>
+          <label for="nombre">Nombre completo</label>
+          <input type="text" name="nombre" id="nombre" required />
+        </div>
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required />
+        </div>
+      </form>
+
+      <form action="" method="POST">
+        <h3>Elige tu hamburguesa</h3>
+        <div>
+          <label for="tipos-hamburguesa">Hamburguesas</label>
+          <select name="tipos-hamburguesa" id="tipos-hamburguesa" required>
+            <option value="classic">Classic Burger</option>
+            <option value="completa">Burger Completa</option>
+            <option value="perrito">Perrito Burger</option>
+            <option value="angus">Angus Burger</option>
+            <option value="mexican">Mexican Burger</option>
+            <option value="american">American Burger</option>
+          </select>
+        </div>
+        <div>
+          <label required>Tipo de carne</label>
+          <div class="radio-button">
+            <label>
+              <input
+                type="radio"
+                name="tipo-carne"
+                value="ternera"
+              />Ternera</label
+            >
+            <label>
+              <input type="radio" name="tipo-carne" value="pollo" />Pollo</label
+            >
+            <label>
+              <input
+                type="radio"
+                name="tipo-carne"
+                value="vegana"
+              />Vegana</label
+            >
+          </div>
+        </div>
+
+        <div>
+          <label>Extras</label>
+          <div class="extras">
+            <label>
+              <input type="checkbox" name="extras[]" value="ensalada" />Ensalada
+            </label>
+            <label>
+              <input type="checkbox" name="extras[]" value="patatas" /> Patatas
+              fritas
+            </label>
+            <label>
+              <input type="checkbox" name="extras[]" value="aros-cebolla" />Aros
+              de cebolla
+            </label>
+            <label>
+              <input type="checkbox" name="extras[]" value="queso" />Bolitas de
+              queso
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label required>Opciones de entrega</label>
+          <div class="radio-button">
+            <label>
+              <input type="radio" name="entrega" value="envio" />Enviar a
+              casa</label
+            >
+            <label>
+              <input type="radio" name="entrega" value="recogida" />Recogida en
+              local</label
+            >
+          </div>
+        </div>
+        <div>
+          <label for="comentarios">Comentarios adicionales</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            maxlength="500"
+            placeholder="Escribe aquí tus comentarios. Por ejemplo: El timbre no funciona."
+          ></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Pedir</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
