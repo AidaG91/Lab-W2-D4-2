@@ -13,13 +13,33 @@
     <div class="container">
       <form action="" method="POST">
         <h3>Datos de Contacto</h3>
-        <div class="titulo">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" name="nombre" id="nombre" required />
+        <div class="tratamiento-persona">
+          <label for="tratamiento"></label>
+          <select name="tratamiento" id="tratamiento">
+            <option value="sr">Sr.</option>
+            <option value="sra">Sra.</option>
+            <option value="otre">Otre</option>
+          </select>
+
+          <div class="titulo">
+            <label for="nombre"></label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Ingresa aquí tu nombre."
+            />
+          </div>
         </div>
+
         <div class="titulo">
           <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required />
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Ingresa tu teléfono de contacto aquí."
+          />
         </div>
       </form>
 
@@ -27,7 +47,7 @@
         <h3>Elige tu hamburguesa</h3>
         <div>
           <label for="tipos-hamburguesa" class="titulo">Hamburguesas</label>
-          <select name="tipos-hamburguesa" id="tipos-hamburguesa" >
+          <select name="tipos-hamburguesa" id="tipos-hamburguesa">
             <option value="classic">Classic Burger</option>
             <option value="completa">Burger Completa</option>
             <option value="perrito">Perrito Burger</option>
@@ -47,11 +67,7 @@
               />Ternera</label
             >
             <label>
-              <input 
-              type="radio"
-              name="tipo-carne"
-              value="pollo" 
-              />Pollo</label
+              <input type="radio" name="tipo-carne" value="pollo" />Pollo</label
             >
             <label>
               <input
@@ -84,34 +100,33 @@
           </div>
         </div>
       </form>
-        <form action="" method="POST">
-          <h3>Opciones de entrega</h3>
-          <div class="radio-button">
-            <label>
-              <input type="radio" name="entrega" value="envio" />Enviar a
-              casa</label
-            >
-            <label>
-              <input type="radio" name="entrega" value="recogida" />Recogida en
-              local</label
-            >
-          </div>
-        </form>
-
-        <div>
-          <label for="comentarios" class="titulo">Comentarios adicionales</label>
-          <textarea
-            id="comentarios"
-            name="comentarios"
-            maxlength="500"
-            placeholder="Escribe aquí tus comentarios. Por ejemplo: El timbre no funciona."
-          ></textarea>
-        </div>
-
-        <div class="button">
-          <button type="submit">Pedir</button>
+      <form action="" method="POST">
+        <h3>Opciones de entrega</h3>
+        <div class="radio-button">
+          <label>
+            <input type="radio" name="entrega" value="envio" />Enviar a
+            casa</label
+          >
+          <label>
+            <input type="radio" name="entrega" value="recogida" />Recogida en
+            local</label
+          >
         </div>
       </form>
+
+      <div class="comment-area">
+        <label for="comentarios" class="titulo">Comentarios adicionales</label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          maxlength="500"
+          placeholder="Escribe aquí tus comentarios. Por ejemplo: El timbre no funciona."
+        ></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit">Pedir</button>
+      </div>
     </div>
   </body>
 </html>
